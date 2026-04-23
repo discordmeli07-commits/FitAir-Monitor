@@ -1,66 +1,69 @@
-# 🏋️‍♂️ AirSport Guardian
+# 🏋️‍♂️ FitAir Monitor
 
-![banner](https://via.placeholder.com/1000x300?text=AirSport+Guardian)
+![FitAir Monitor Banner](https://dummyimage.com/1200x300/0f172a/ffffff\&text=FitAir+Monitor)
 
-**Sistema intel·ligent de control de qualitat de l’aire i ocupació en espais esportius**
+**Sistema intel·ligent de monitorització de qualitat de l’aire i ocupació en espais esportius**
 
 ---
 
 ## 📌 Descripció
 
-AirSport Guardian és un projecte basat en **ESP32** que permet monitoritzar en temps real:
+FitAir Monitor és un projecte basat en **ESP32** que permet controlar en temps real les condicions ambientals d’un espai esportiu.
 
-* 🌬️ Nivells de CO₂
+Mesura:
+
+* 🌬️ CO₂
 * 🌡️ Temperatura
 * 💧 Humitat
-* 👥 Ocupació de l’espai
+* 👥 Ocupació
 
-L’objectiu és **millorar el confort i la seguretat** en instal·lacions esportives, evitant ambients carregats i situacions de risc.
+👉 L’objectiu és millorar el **confort**, la **seguretat** i la **qualitat de l’aire**.
 
 ---
 
 ## 🎯 Objectius
 
-* Controlar la qualitat de l’aire en interiors
+* Evitar aire carregat en gimnasos
 * Detectar sobreocupació
-* Informar en temps real als usuaris
-* Facilitar la presa de decisions (ventilar, reduir aforament, etc.)
+* Informar en temps real
+* Ajudar a prendre decisions (ventilar, reduir aforament…)
 
 ---
 
-## 🧠 Funcionament
+## 🧠 Funcionament del sistema
 
-![diagrama](https://via.placeholder.com/800x400?text=Diagrama+del+sistema)
+![Diagrama sistema](https://dummyimage.com/900x400/1e293b/ffffff\&text=ESP32+-+Sensors+-+Web)
 
-1. L’ESP32 llegeix dades dels sensors
-2. Les dades s’envien via WiFi
-3. La web mostra la informació en temps real
-4. Es genera un estat (Òptim / Avís / Perill)
+1. L’ESP32 llegeix els sensors
+2. Envia les dades via WiFi
+3. La web les mostra en temps real
+4. Es calcula l’estat de l’aire
 
 ---
 
 ## 🧰 Tecnologies utilitzades
 
-* 🔌 **ESP32**
+* 🔌 ESP32
 * 🌐 HTML, CSS, JavaScript
 * 📡 WiFi (HTTP / MQTT)
-* 📊 Sensors:
 
-  * CO₂ (MH-Z19 o similar)
-  * Temperatura i humitat (DHT22)
-  * Sensor d’ocupació (PIR o comptador)
+### Sensors:
+
+* MH-Z19 → CO₂
+* DHT22 → temperatura i humitat
+* PIR → ocupació
 
 ---
 
 ## 🖥️ Interfície web
 
-![web](https://via.placeholder.com/800x400?text=Interficie+web)
+![Dashboard](https://dummyimage.com/900x400/0f172a/ffffff\&text=Dashboard+FitAir+Monitor)
 
 La web mostra:
 
 * Dades en temps real
 * Estat de la qualitat de l’aire
-* Interfície clara i minimalista
+* Disseny minimalista i clar
 
 ---
 
@@ -69,7 +72,7 @@ La web mostra:
 ### 1. Clonar el repositori
 
 ```bash
-git clone https://github.com/el-teu-usuari/airsport-guardian.git
+git clone https://github.com/el-teu-usuari/fitair-monitor.git
 ```
 
 ### 2. Obrir la web
@@ -84,14 +87,14 @@ Obre `index.html` al navegador.
 
 ---
 
-## 🔌 Exemple de dades (JSON)
+## 🔌 Exemple de dades
 
 ```json
 {
-  "co2": 850,
-  "temperatura": 22.5,
-  "humitat": 55,
-  "ocupacio": 30
+  "co2": 920,
+  "temperatura": 23.1,
+  "humitat": 52,
+  "ocupacio": 28
 }
 ```
 
@@ -99,33 +102,29 @@ Obre `index.html` al navegador.
 
 ## ⚠️ Nivells de qualitat de l’aire
 
-| CO₂ (ppm) | Estat     | Acció              |
-| --------- | --------- | ------------------ |
-| < 800     | 🟢 Òptim  | Cap acció          |
-| 800-1200  | 🟡 Avís   | Ventilar           |
-| > 1200    | 🔴 Perill | Evacuar / Ventilar |
+| CO₂ (ppm) | Estat     | Acció           |
+| --------- | --------- | --------------- |
+| < 800     | 🟢 Òptim  | Correcte        |
+| 800-1200  | 🟡 Avís   | Ventilar        |
+| > 1200    | 🔴 Perill | Acció immediata |
 
 ---
 
 ## 📈 Millores futures
 
 * 📊 Gràfiques en temps real
-* 🔔 Sistema d’alertes
-* 📱 Versió mòbil
-* 🤖 Automatització de ventilació
+* 🔔 Alertes automàtiques
+* 📱 App mòbil
+* 🌬️ Control automàtic de ventilació
 
 ---
 
 ## 👨‍💻 Autor
 
-Projecte desenvolupat per a finalitat educativa.
+Projecte educatiu – FitAir Monitor
 
 ---
 
 ## 📄 Llicència
 
-Aquest projecte és d’ús educatiu.
-
----
-
-⭐ Si t’ha servit, pots donar-li una estrella al repositori!
+Ús educatiu.
